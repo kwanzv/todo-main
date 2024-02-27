@@ -109,5 +109,6 @@ deleteBtn.forEach((button) => {
 const toggleMode = document.querySelector(".dark-mode-btn");
 
 toggleMode.addEventListener("click", () => {
-  document.documentElement.classList.toggle("dark");
+  console.log("I'm trying to change into light");
+  document.documentElement.classList.remove("dark");
 });
