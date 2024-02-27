@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Todo app</title>
+  </head>
+  <body class="dark:bg-slate-900 bg-white">
+    <header class="flex justify-between p-12 h-64">
+      <h1 class="text-6xl text-white -tracking-tighter">Todo</h1>
+      <span class="dark-mode-btn"
+        ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+          <path
+            fill="#FFF"
+            fill-rule="evenodd"
+            d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"
+          />
+        </svg>
+      </span>
+    </header>
+
+    <main class="mt-8 mx-auto text-center sm:w-1/2 w-2/3">
+      <form class="translate-y-[-300%]">
+        <div
+          class="input-container relative flex items-center dark:bg-slate-800 bg-white text-slate:800 px-4 rounded-md"
+        >
+          <label class="sr-only hidden">Input todo</label>
+          <button
+            type="submit"
+            class="submit-button text-4xl padding-4 text-slate-500"
+          >
+            O
+          </button>
+          <input
+            type="text"
+            class="dark:text-white text-black rounded-full px-12 py-4 w-full flex-grow dark:bg-slate-800 bg-white outline-none"
+            placeholder="Create a new todo"
+          />
+        </div>
+      </form>
+      <div class="main-wrapper translate-y-[-125px]">
+        <div
+          class="todo-container dark:bg-slate-800 bg-white rounded-lg overflow-hidden dark:border-none border border-black"
+        >
+          <ul
+            class="flex flex-col w-full gap-y-6 dark:text-white text-black"
+            id="todo-list"
+          ></ul>
+          <div
+            class="stats dark:bg-slate-800 flex justify-around p-4 dark:text-white text-black"
+          >
+            <p id="item-count"></p>
+            <p>Clear completed</p>
+          </div>
+        </div>
+        <div
+          class="options rounded-md dark:bg-slate-800 dark:text-white text-black border border-black dark:border-none flex justify-around mt-12 p-4"
+        >
+          <button class="text-indigo-400">All</button>
+          <button>Active</button>
+          <button>Completed</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="/index.js" type="module"></script>
+  </body>
+</html>
